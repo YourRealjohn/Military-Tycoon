@@ -1,11 +1,12 @@
 # REDz Library V2
-depois faço outra library Melhor
-## Library
+*I'll make a better library later.*
+
+## ðŸ“¦ Load the Library
 ```lua
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/Seven7-lua/RedzLibs/refs/heads/main/src/RedzlibV2/source.lua")))()
 ```
 
-## Cria a janela Inicial
+## ðŸªŸ Create the Main Window
 ```lua
 MakeWindow({
   Hub = {
@@ -13,7 +14,7 @@ MakeWindow({
     Animation = "by : redz9999"
   },
   Key = {
-    KeySystem = false,
+    KeySystem = false, -- Put true if you want to activate the key system false if not
     Title = "Key System",
     Description = "",
     KeyLink = "",
@@ -26,30 +27,28 @@ MakeWindow({
     }
   }
 })
+```
 
+```lua
 --[[
-  Hub = {
-    Title = "REDz HUB" -- <string> Titulo do seu script
-    Animation = "by : redz9999" -- <string> Adiciona um texto na animacão do seu HUB
-  },
-  Key = {
-    KeySystem = <bollean> Adiciona um sistema de chaves
-    Title = "Key System" <string> Adiciona um titulo ao seu sistema de chaves
-    Description = "" <string> Adiciona uma descrição ao seu sistema de chaves
-    KeyLink = "" <string> Adicina o Link onde pega a chave do HUB
-    Keys = {"1234"} <table> Adiciona as Chaves
-    Notifi = {
-      Notifications = true <boolean> Adicina notificações ao sistema de chaves
-      CorrectKey = "Running the Script..." <string> notificação quando a chave estiver correta
-      Incorrectkey = "The key is incorrect" <string> notificação quando a chave estiver incorreta
-      CopyKeyLink = "Copied to Clipboard" <string> notificação quando o link da chave fir copiado
-    }
-  }
+Hub: Window configuration
+  Title: <string> HUB title
+  Animation: <string> Animation text
+Key: Key system configuration
+  KeySystem: <boolean> Enable or disable key system
+  Title: <string> Key system title
+  Description: <string> Key system description
+  KeyLink: <string> URL to get the key
+  Keys: <table> List of valid keys
+  Notifi: Key system notifications
+    Notifications: <boolean> Enable notifications
+    CorrectKey: <string> Message on correct key
+    Incorrectkey: <string> Message on wrong key
+    CopyKeyLink: <string> Message when link is copied
 ]]
 ```
 
-## Botão de minimizar
-Adiciona um botão para você minimizar o seu HUB
+## âž– Minimize Button
 ```lua
 MinimizeButton({
   Image = "",
@@ -59,325 +58,188 @@ MinimizeButton({
   Stroke = false,
   StrokeColor = Color3.fromRGB(255, 0, 0)
 })
+```
 
+```lua
 --[[
-  Image = "" <string> imagem do botão
-  Size = {40, 40} <table> tamanho do botão
-  Color = Color3.fromRGB(10, 10, 10) <Color3>  Cor do fundo do botäo
-  Corner = true -- <boolean> Adicina um UICorner
-  Stroke = false <boolean> Adiciona um UIStroke
-  StrokeColor = Color3.fromRGB(255, 0, 0) <Color3> Cor do UIStroke
+Image: <string> URL or asset ID for the image
+Size: <table> Button size {width, height}
+Color: <Color3> Background color
+Corner: <boolean> Round corners
+Stroke: <boolean> Add border
+StrokeColor: <Color3> Border color
 ]]
 ```
 
-## Tab
-Cria uma guia
+## ðŸ—‚ï¸ Create a Tab
 ```lua
 local Main = MakeTab({Name = "Main"})
-
---[[
-  Name = "Main" <string> Nome da guia
-]]
 ```
 
-## Notificação
-Cria uma notificacão
+## ðŸ”” Create a Notification
 ```lua
 MakeNotifi({
   Title = "REDz HUB",
-  Text = "Notificação teste",
+  Text = "Test Notification",
   Time = 5
 })
-
---[[
-  Title = "REDz HUB" <string> titulo da notificação
-  Text = "Notificação teste" <string> descrição da notificação
-  Time = 5 <number> tempo da notificação
-]]
-
 ```
 
-## Sesão
-cria uma sesão
+## ðŸ“„ Create a Section
 ```lua
-local section = AddSection(Main, {"Teste"})
---[[
-  {"Teste"} <table> nome da janela
-]]
+local section = AddSection(Main, {"Test"})
 ```
 
-## Atualizar sesão
-Atualiza um texto de uma sesão
+## ðŸ“ Update Section Text
 ```lua
-SetSection(section, "HI")
+SetSection(section, "Hello")
 ```
 
-## Botão
-cria um botão
+## ðŸ”˜ Create a Button
 ```lua
 AddButton(Main, {
-  Name = "Botão teste",
+  Name = "Test Button",
   Callback = function()
-    
+    -- your function
   end
 })
-
---[[
-  Name = "Botão teste" <string> nome do seu botão
-  Callback = function()
-    -- funcão do seu botão
-  end
-]]
 ```
 
-## caixa de seleção
-cria uma caixa de seleção onde você pode alternar entre (true/false)
+## âœ… Create a Toggle
 ```lua
 local Toggle = AddToggle(Main, {
-  Name = "Toggle teste",
+  Name = "Test Toggle",
   Default = false,
   Callback = function(Value)
-    
+    -- your function
   end
 })
-
---[[
-  Name = "Toggle teste" <string> nome da sua caixa de seleção
-  Default = false <boolean> valor padrão
-  Callback = function(Value)
-    -- função da sua caixa de seleção
-  end
-]]
 ```
 
-## Atualizar caixa de seleção
-Atualiza o valor atual de uma caixa de seleção
+## ðŸ”„ Update Toggle
 ```lua
 UpdateToggle(Toggle, true)
 ```
 
-## controle deslizante
-cria um controle deslizante
+## ðŸŽšï¸ Create a Slider
 ```lua
 local Slider = AddSlider(Main, {
-  Name = "Slider teste",
+  Name = "Test Slider",
   MinValue = 10,
   MaxValue = 100,
   Default = 25,
   Increase = 1,
   Callback = function(Value)
-    
+    -- your function
   end
 })
-
---[[
-  Name = "Slider teste" <string> nome do controle deslizante
-  MinValue = 10 <number> valor minimo
-  MaxValue = 100 <number> valor maximo
-  Default = 25 <number> valor padrão
-  Increase = 1 <number> valor que almenta de acordo com a posição do 
-  Callback = function(Value)
-    função do controle deslizante
-  end
-]]
 ```
 
-## Atualizar controle deslizante
-atualiza o valor atual de um controle deslizante
+## ðŸ”„ Update Slider
 ```lua
-UpdateSlider(Slider, 25)
-
---[[
-  <number> novo valor do controle deslizante
-]]
+UpdateSlider(Slider, 50)
 ```
 
-## atalho do teclado
-cria um atalho para uma tecla do teclado
+## âŒ¨ï¸ Create a Keybind
 ```lua
 AddKeybind(Main, {
-  Name = "Keybind teste",
+  Name = "Test Keybind",
   KeyCode = "E",
   Default = false,
   Callback = function(Value)
-    
+    -- your function
   end
 })
-
---[[
-  Name = "Keybind teste" <string> nome do atalho do teclado
-  KeyCode = "E" <string> tecla
-  Default = false <boolean> valor padrã (isso fara funcionar como uma caixa de seleção)
-  Callback = function(Value)
-    -- função do atalho do teclado
-  end
-]]
 ```
 
-## caixa de texto
-Cria uma Caixa de Texto
+## ðŸ“ Create a TextBox
 ```lua
 AddTextBox(Main, {
-  Name = "TextBox teste",
-  Default = "bom dia",
-  PlaceholderText = "teste",
+  Name = "Test TextBox",
+  Default = "Hello",
+  PlaceholderText = "Type here...",
   ClearText = true,
   Callback = function(Value)
-    
+    -- your function
   end
 })
-
---[[
-  Name = "TextBox teste" <string> Nome da caixa de texto
-  Default = "bom dia" <string> texto padrão
-  PlaceholderText = "teste" <string> texto que mostrará quando a caixa de selecão não tiver nenhum texto
-  ClearText = true <boolean> não exclui o texto quando você abre a caixa de texto
-  Callback = function(Value)
-    -- fucão da caixa de texto
-  end
-]]
 ```
 
-## Menu Suspenso
-Cria uma lista de opções
+## â¬‡ï¸ Create a Dropdown
 ```lua
 local Dropdown = AddDropdown(Main, {
-  Name = "Dropdown teste",
+  Name = "Test Dropdown",
   Options = {"1", "2", "3"},
   Default = "2",
   Callback = function(Value)
-    
+    -- your function
   end
 })
-
---[[
-  Name = "Dropdown teste" <string> nome do menu suspenso
-  Options = {"1", "2", "3"} <table> lista de opções
-  Default = "2" <string> opção padrão
-  Callback = function(Value)
-    -- função do menu suspenso
-  end
-]]
 ```
 
-## Atualizar Menu suspenso
-Atualiza a lista de opções do menu suspenso
+## ðŸ”„ Update Dropdown
 ```lua
-UpdateDropdown(Dropdown, {"um", "dois", "três"})
-
---[[
-  {"um", "dois", "três"} <table> novas opções do menu suspenso
-]]
+UpdateDropdown(Dropdown, {"One", "Two", "Three"})
 ```
 
-## setor de cores
-cria um setor de cores
+## ðŸŽ¨ Create a Color Picker
 ```lua
 AddColorPicker(Main, {
-  Name = "Color picker teste",
+  Name = "Test Color Picker",
   Default = Color3.fromRGB(255, 255, 0),
   Callback = function(Value)
-    
+    -- your function
   end
 })
-
---[[
-  Name = "Color picker teste" <string> Nome do setor de cores
-  Default = Color3.fromRGB(255, 255, 0) <Color3> Define a cor padrão do setor de cores
-  Callback = function(Value)
-    -- funcão do setor de cores
-  end
-]]
 ```
 
-## Texto 
-Cria um texto
+## ðŸ·ï¸ Create a Text Label
 ```lua
 local Label = AddTextLabel(Main, "AutoFarm")
-
---[[
-  <string> Texto
-]]
 ```
 
-## Atualizar texto
-atualiza um texto
+## ðŸ”„ Update Label Text
 ```lua
-SetLabel(Label, "HI")
-
---[[
-  <string> novo Texto
-]]
+SetLabel(Label, "Running")
 ```
 
-## Parágrafo
-cria um Parágrafo
+## ðŸ“œ Create a Paragraph
 ```lua
-local Paragraph = AddParagraph(Main, {"Paragraph teste", "bom dia meus manos"})
-
---[[
-  <string> Nome do Parágrafo
-  <string> descrição do Parágrafo
-]]
+local Paragraph = AddParagraph(Main, {"Paragraph Title", "This is a paragraph description."})
 ```
 
-## Atualizar Parágrafo
-Atualiza um texto de um Parágrafo
+## ðŸ”„ Update Paragraph
 ```lua
-SetParagraph(Paragraph, {"Paragraph", ":>"})
-
---[[
-  <string> novo Nome do Parágrafo
-  <string> Nova descrição do Parágrafo
-]]
+SetParagraph(Paragraph, {"New Title", "Updated description."})
 ```
 
-## Imagem
-cria uma imagem
+## ðŸ–¼ï¸ Create an Image
 ```lua
 local Image = AddImageLabel(Main, {
   Name = "Cool Image",
   Image = "rbxassetid://"
 })
-
---[[
-  Name = "Cool Image" <string> Nome da imagem
-  Image = "rbxassetid://" <string> id da imagem
-]]
 ```
 
-## Atualizar Imagem
-atualiza uma imagem
+## ðŸ”„ Update Image
 ```lua
 SetImage(Image, "rbxassetid://4155801252")
-
---[[
-  <string> Nova imagem
-]]
 ```
 
-## Destruir o script
+## ðŸ’£ Destroy the Script
+```lua
 DestroyScript()
+```
 
-# Extra
-## Caixa de seleção Mobile
-Adicina uma caixa de seleção que fica voando na tela
+## ðŸ“± Mobile Toggle (Floating)
 ```lua
 local MobileToggle = AddMobileToggle({
-  Name = "Toggle",
+  Name = "Mobile Toggle",
   Visible = true,
   Callback = function(Value)
-    
+    -- your function
   end
 })
 
-MobileToggle.Visible = (false/true)
-
---[[
-  Name = "Toggle" <string> Nome da caixa de seleção
-  Visible = false <boolean> coloca ela invisivel ou visivel
-  Callback = function()
-    -- função da caixa de seleção
-  end
-]]
+MobileToggle.Visible = true -- or false
 ```
