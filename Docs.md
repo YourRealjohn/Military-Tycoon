@@ -1,5 +1,5 @@
 # REDz Library V2
-*I'll make a better library later.*
+*RedzLibV2 English Version*
 
 ## ðŸ“¦ Load the Library
 ```lua
