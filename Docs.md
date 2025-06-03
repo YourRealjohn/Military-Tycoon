@@ -1,12 +1,12 @@
 # REDz Library V2
 *RedzLibV2 English Version*
 
-## ðŸ“¦ Load the Library
+##  Load the Library
 ```lua
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/Seven7-lua/RedzLibs/refs/heads/main/src/RedzlibV2/source.lua")))()
 ```
 
-## ðŸªŸ Create the Main Window
+##  Create the Main Window
 ```lua
 MakeWindow({
   Hub = {
@@ -48,7 +48,7 @@ Key: Key system configuration
 ]]
 ```
 
-## âž– Minimize Button
+##  Minimize Button
 ```lua
 MinimizeButton({
   Image = "",
@@ -71,12 +71,12 @@ StrokeColor: <Color3> Border color
 ]]
 ```
 
-## ðŸ—‚ï¸ Create a Tab
+##  Create a Tab
 ```lua
 local Main = MakeTab({Name = "Main"})
 ```
 
-## ðŸ”” Create a Notification
+##  Create a Notification
 ```lua
 MakeNotifi({
   Title = "REDz HUB",
@@ -85,17 +85,17 @@ MakeNotifi({
 })
 ```
 
-## ðŸ“„ Create a Section
+##  Create a Section
 ```lua
 local section = AddSection(Main, {"Test"})
 ```
 
-## ðŸ“ Update Section Text
+##  Update Section Text
 ```lua
 SetSection(section, "Hello")
 ```
 
-## ðŸ”˜ Create a Button
+##  Create a Button
 ```lua
 AddButton(Main, {
   Name = "Test Button",
@@ -105,7 +105,7 @@ AddButton(Main, {
 })
 ```
 
-## âœ… Create a Toggle
+##  Create a Toggle
 ```lua
 local Toggle = AddToggle(Main, {
   Name = "Test Toggle",
@@ -116,12 +116,12 @@ local Toggle = AddToggle(Main, {
 })
 ```
 
-## ðŸ”„ Update Toggle
+##  Update Toggle
 ```lua
 UpdateToggle(Toggle, true)
 ```
 
-## ðŸŽšï¸ Create a Slider
+##  Create a Slider
 ```lua
 local Slider = AddSlider(Main, {
   Name = "Test Slider",
@@ -135,12 +135,12 @@ local Slider = AddSlider(Main, {
 })
 ```
 
-## ðŸ”„ Update Slider
+##  Update Slider
 ```lua
 UpdateSlider(Slider, 50)
 ```
 
-## âŒ¨ï¸ Create a Keybind
+##  Create a Keybind
 ```lua
 AddKeybind(Main, {
   Name = "Test Keybind",
@@ -152,7 +152,7 @@ AddKeybind(Main, {
 })
 ```
 
-## ðŸ“ Create a TextBox
+##  Create a TextBox
 ```lua
 AddTextBox(Main, {
   Name = "Test TextBox",
@@ -165,7 +165,7 @@ AddTextBox(Main, {
 })
 ```
 
-## â¬‡ï¸ Create a Dropdown
+##  Create a Dropdown
 ```lua
 local Dropdown = AddDropdown(Main, {
   Name = "Test Dropdown",
@@ -177,12 +177,12 @@ local Dropdown = AddDropdown(Main, {
 })
 ```
 
-## ðŸ”„ Update Dropdown
+##  Update Dropdown
 ```lua
 UpdateDropdown(Dropdown, {"One", "Two", "Three"})
 ```
 
-## ðŸŽ¨ Create a Color Picker
+##  Create a Color Picker
 ```lua
 AddColorPicker(Main, {
   Name = "Test Color Picker",
@@ -193,27 +193,27 @@ AddColorPicker(Main, {
 })
 ```
 
-## ðŸ·ï¸ Create a Text Label
+##  Create a Text Label
 ```lua
 local Label = AddTextLabel(Main, "AutoFarm")
 ```
 
-## ðŸ”„ Update Label Text
+##  Update Label Text
 ```lua
 SetLabel(Label, "Running")
 ```
 
-## ðŸ“œ Create a Paragraph
+##  Create a Paragraph
 ```lua
 local Paragraph = AddParagraph(Main, {"Paragraph Title", "This is a paragraph description."})
 ```
 
-## ðŸ”„ Update Paragraph
+##  Update Paragraph
 ```lua
 SetParagraph(Paragraph, {"New Title", "Updated description."})
 ```
 
-## ðŸ–¼ï¸ Create an Image
+##  Create an Image
 ```lua
 local Image = AddImageLabel(Main, {
   Name = "Cool Image",
@@ -221,12 +221,12 @@ local Image = AddImageLabel(Main, {
 })
 ```
 
-## ðŸ”„ Update Image
+##  Update Image
 ```lua
 SetImage(Image, "rbxassetid://4155801252")
 ```
 
-## ðŸ’£ Destroy the Script
+##  Destroy the Script
 ```lua
 DestroyScript()
 ```
