@@ -1,4 +1,4 @@
-# REDz Library V2
+# Redz Library V2
 *RedzLibV2 English Version*
 
 ##  Load the Library
