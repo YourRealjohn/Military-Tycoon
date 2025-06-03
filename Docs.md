@@ -231,7 +231,7 @@ SetImage(Image, "rbxassetid://4155801252")
 DestroyScript()
 ```
 
-## ðŸ“± Mobile Toggle (Floating)
+##  Mobile Toggle (Floating)
 ```lua
 local MobileToggle = AddMobileToggle({
   Name = "Mobile Toggle",
