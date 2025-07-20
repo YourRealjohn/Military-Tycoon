@@ -1,5 +1,7 @@
-# Chris UI Library V3
-*Chris UI LibV2 English Version*
+# Mythic UI Library V3
+*Mythic UI LibV3 English Version*
+
+# Read 
 *Basically Redzlib copy but different fix paragraph and some changes in the new UI*
 
 ##  Load the Library
@@ -80,7 +82,7 @@ local Main = MakeTab({Name = "Main"})
 ##  Create a Notification
 ```lua
 MakeNotifi({
-  Title = "REDz HUB",
+  Title = "Mythixz HUB",
   Text = "Test Notification",
   Time = 5
 })
