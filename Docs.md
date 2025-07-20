@@ -1,5 +1,6 @@
-# Redz Library V2
-*RedzLibV2 English Version*
+# Chris UI Library V3
+*Chris UI LibV2 English Version*
+*Basically Redzlib copy but different fix paragraph and some changes in the new UI*
 
 ##  Load the Library
 ```lua
@@ -10,8 +11,8 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/Seven7-lua/RedzLibs/
 ```lua
 MakeWindow({
   Hub = {
-    Title = "REDz HUB",
-    Animation = "by : redz9999"
+    Title = "Mythixz HUB",
+    Animation = "By : Chris"
   },
   Key = {
     KeySystem = false, -- Put true if you want to activate the key system false if not
