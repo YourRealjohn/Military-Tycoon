@@ -108,6 +108,17 @@ AddButton(Main, {
 })
 ```
 
+##  Create a NewButton
+```lua
+AddNewButton(Main, {
+  Name = "Test Button",
+  Callback = function()
+    -- your function
+  end
+})
+```
+
+
 ##  Create a Toggle
 ```lua
 local Toggle = AddToggle(Main, {
@@ -199,6 +210,11 @@ AddColorPicker(Main, {
 ##  Create a Text Label
 ```lua
 local Label = AddTextLabel(Main, "AutoFarm")
+```
+
+##  Create a New Text Label
+```lua
+local Label = AddNewTextLabel(Main, "AutoFarm")
 ```
 
 ##  Update Label Text
